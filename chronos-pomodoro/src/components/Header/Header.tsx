@@ -1,15 +1,16 @@
 import styles from './Header.module.css'
 
 type HeaderProps = {
+    children: React.ReactNode;//aceita todos os tipos que react aceita como children
 
 }
 
-export default function Header(props) {
+export default function Header({ children }: HeaderProps) {
 
 
     return (
         <header className={styles.header}>
-            <h1>{props.children}</h1>
+            {children}
         </header>
     )
 }
